@@ -1,12 +1,6 @@
 <template>
   <div id="app">
     <Header />
-    <!-- <nav>
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link> |
-      <router-link to="/login">login</router-link>
-    </nav> -->
-    <!-- <AppLogin /> -->
     <router-view />
     <Footer />
   </div>
@@ -14,7 +8,7 @@
 <script>
 import Footer from "./views/home/layout/components/Footer.vue";
 import Header from "./views/home/layout/components/Header.vue";
-// import AppLogin from "./views/home/layout/components/Footer.vue";
+
 export default {
   data() {
     return {};

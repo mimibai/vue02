@@ -1,8 +1,10 @@
 
 const TokenKey = 'screeningforcancer-jingxi'
+// const uesr = 'screeningforcancer-jingxi'
 
 export function getToken() {
   return localStorage.getItem(TokenKey)
+  // localStorage.getItem(uesr)
 }
 
 export function setToken(token) {

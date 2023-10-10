@@ -1,57 +1,3 @@
-// import axios from 'axios';
-// // import store from '../store';
-// import vue from 'vue';
-// // import router from '../router';
-
-// // 创建axios实例
-// const service = axios.create({
-//   baseURL: process.env.BASE_API, // api的base_url
-//   timeout: 5000                  // 请求超时时间
-// });
-
-// // request拦截器
-// service.interceptors.request.use(config => {
-//   // Do something before request is sent
-//   return config;
-// }, error => {
-//   // Do something with request error
-//   console.log(error); // for debug
-//   Promise.reject(error);
-// })
-
-// // respone拦截器
-// service.interceptors.response.use(
-//   response => response,
-//   error => {
-//     console.log('err' + error);// for debug
-//     vue.$Message.error({
-//                     message: error.message,
-//                     duration: 5 * 1000,
-//                     closable: true
-//                 });
-//     return Promise.reject(error);
-//   }
-// )
-
-// export default service;
-
-// // 组件功能：负责统一导出一个配置后的 axios
-// // 1.导入 axios 模块
-// import axios from 'axios'
-// // 2 .配置 axios 模块
-// // 2.1. 配置基地址
-// axios.defaults.baseURL = 'api'
-// // 2.2 设置请求拦截器
-// // 请求在到达服务器之前，先会调用use中的这个回调函数来添加请求头信息
-// axios.interceptors.request.use(config => {
-//   // 为请求头对象，添加token验证的Authorization字段
-//   config.headers.Authorization = window.sessionStorage.getItem('token')
-//   return config
-// })
-
-// // 3.导出 axios 模块方法
-// export default axios
-
 import axios from 'axios'
 import router from '@/router'
 import {
@@ -80,7 +26,7 @@ service.interceptors.request.use(
       // 让每一次请求都携带token
       // ['Authorization'] 是一个与开发端协定好的header
       // 可以根据实际情况修改
-      config.headers['Authorization'] = getToken()
+      config.headers['qian'] = getToken()
     }
     if (store.getters.userIdentityId) {
       // 根据用户身份判断，如果是患者用户，每次请求带上固定header

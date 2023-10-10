@@ -74,6 +74,7 @@ import {
         }).then(response => {
           const data = response.Data
           commit('SET_TOKEN', data.sessionKey)
+          
           // 将用户信息存入localStorage,不知道安不安全
           setToken(data.sessionKey)
           resolve()

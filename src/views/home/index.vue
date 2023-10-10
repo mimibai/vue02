@@ -1,14 +1,16 @@
 <template>
   <div id="app">
-    <Header />
+    <!-- <Header /> -->
     <AppMain />
-    <Footer />
+    <Child />
+    <!-- <Footer /> -->
   </div>
 </template>
 <script>
-import Footer from "./views/home/layout/components/Footer.vue";
+// import Footer from "./views/home/layout/components/Footer.vue";
 import Header from "./views/home/layout/components/Header.vue";
-import AppMain from "./views/home/layout/components/Footer.vue";
+import AppMain from "./views/home/layout/components/AppMain.vue";
+import Child from "./views/home/layout/components/Child.vue";
 export default {
   data() {
     return {};
@@ -16,7 +18,8 @@ export default {
   components: {
     Header,
     AppMain,
-    Footer
+   
+    Child
   },
   mounted:function(){},
   methods: {},

@@ -23,6 +23,8 @@
             </a>
           </div>
         </div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
         <!-- <div class="swiper-pagination"></div> -->
       </div>
     </div>
@@ -70,17 +72,21 @@ export default {
           disableOnInteraction: false
         },
         updateOnImagesReady: true,
-        slidesPerView: 2,
+        slidesPerView: 1,
         spaceBetween: 25,
         //spaceBetween : '10%',按container的百分比
 
         observer: true,
         observeParents: true,
         observeSlideChildren: true,
-
+        effect: 'fade',
         pagination: {
           el: ".swiper-pagination",
           clickable: true,
+        },
+        navigation: {
+          nextEl: '.swiper-button-next',
+          prevEl: '.swiper-button-prev',
         },
         breakpoints: { 
 					320: {  //当屏幕宽度大于等于320
@@ -121,10 +127,10 @@ export default {
     transition: all 0.3s;
   }
 }
-a:hover .pic img {
-  transform: scale(1.1);
-  transition: all 0.3s;
-}
+// a:hover .pic img {
+//   transform: scale(1.1);
+//   transition: all 0.3s;
+// }
 @media only screen and (max-width: 450px) {
   .containerBox {
     width: 100%;

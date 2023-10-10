@@ -7,7 +7,6 @@ module.exports = defineConfig({
     // 如果请求地址以/api打头,就出触发代理机制
     // http://localhost:8080/api/login -> http://localhost:3000/api/login
     '/api': {
-      // target: 'https://user.api.it120.cc', // 我们要代理的真实接口地址
       target: 'https://www.bhecs.com', // 我们要代理的真实接口地址
        pathRewrite: {
         '^/api': '' // 把/api替换成target 之后用二次封装的地址就可以了
@@ -17,6 +16,4 @@ module.exports = defineConfig({
     }
   }
   }
- 
-
 })

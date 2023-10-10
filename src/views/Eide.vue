@@ -1,6 +1,6 @@
 <template>
   <div class="dashboard-container">
-    <!-- <div class="text">当前的用户名: {{username}}</div> -->
+    <div class="text">当前的用户名: {{this.user}}</div>
     <el-form>
       <el-form-item label="当前密码">
         <el-input v-model="PostForm.oldPwd" type="password" />
@@ -23,13 +23,16 @@ export default {
   data() {
     return {
         username: '',
-      PostForm: {}
+      PostForm: {},
+      user:''
     }
   },
   created() {
-    // let User = JSON.parse(localStorage.getItem("User"));
-    // this.User = User;
-    // console.log(User);
+    let userName  = JSON.parse(localStorage.getItem("user"));
+    if(userName ){
+      this.user = userName.username
+      // console.log(this.user)
+    }
   },
   methods: {
     async EditBtn() {

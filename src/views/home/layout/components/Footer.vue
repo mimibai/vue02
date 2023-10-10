@@ -1,7 +1,9 @@
 <template>
   <div class="footer">
-    这是footer
+    <p>{{ copyRight }}</p>
+    <slot name="text"></slot>
   </div>
+  
 </template>
 <script>
 // import FriendLink from './FriendLink.vue';
@@ -9,7 +11,7 @@ export default {
   data() {
     return {
       footerLogo:'',
-      copyRight: "佰惠早筛集团　CopyRight ©2021 佰泽医疗投资集团有限公司",
+      copyRight: "天创集团　CopyRight ©2023 天创投资集团有限公司",
       icp: "津ICP备20006368号",
     };
   },

@@ -26,8 +26,22 @@ const routes = [
   {
     path: '/eide',
     name: 'eide',
-    component: () => import('../views/Eide.vue')
-  }
+    component: () => import('../views/Eide.vue'),
+    meta: {
+      title: '修改密码',
+      needLogin: true
+    },
+  },
+  {
+    path: '/pri',
+    name: 'pri',
+    component: () => import('../views/pri.vue')
+  },
+  {
+    path: '/child',
+    name: 'child',
+    component: () => import('../views/child.vue')
+  },
 ]
 
 const router = new VueRouter({
